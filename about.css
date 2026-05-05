@@ -1,0 +1,110 @@
+/* ========== ABOUT SECTION ==========*/
+.about-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-xl);
+}
+
+.about-intro {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    line-height: 1.8;
+    margin-bottom: var(--space-lg);
+}
+
+.about-intro strong {
+    color: var(--accent);
+}
+
+.about-content p {
+    color: var(--text-muted);
+    margin-bottom: var(--space-lg);
+    line-height: 1.8;
+}
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.highlight {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: rgba(255, 139, 171, 0.08);
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    transition: all 300ms ease;
+}
+
+.highlight:hover {
+    background: rgba(255, 139, 171, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(255, 139, 171, 0.2);
+}
+
+.highlight i {
+    color: var(--accent);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.about-metrics {
+    display: grid;
+    gap: var(--space-lg);
+}
+
+.metric-card {
+    background: var(--bg-light);
+    padding: var(--space-lg);
+    border-radius: 12px;
+    border: 2px solid var(--primary);
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+.metric-card:hover {
+    border-color: var(--accent);
+    background: rgba(255, 139, 171, 0.08);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(255, 139, 171, 0.2);
+}
+
+.metric-icon {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 139, 171, 0.15);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    font-size: 1.3rem;
+    margin-bottom: var(--space-md);
+}
+
+.metric-card h3 {
+    color: var(--text-dark);
+    margin-bottom: var(--space-xs);
+}
+
+.metric-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .about-wrapper,
+    .about-content,
+    .about-metrics {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+}

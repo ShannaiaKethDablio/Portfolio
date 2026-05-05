@@ -1,0 +1,143 @@
+
+/* ========== SERVICES SECTION ==========*/
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: var(--space-lg);
+}
+
+.service-card {
+    background: white;
+    padding: var(--space-lg);
+    border-radius: 12px;
+    border: 2px solid var(--primary);
+    transition: all 300ms ease;
+}
+
+.service-card:hover {
+    border-color: var(--accent);
+    background: var(--bg-light);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(255, 139, 171, 0.2);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--space-md);
+}
+
+.service-card h3 {
+    color: var(--text-dark);
+    margin-bottom: var(--space-sm);
+    font-size: 1.1rem;
+}
+
+.service-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: var(--space-md);
+    line-height: 1.7;
+}
+
+.service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+.service-tags span {
+    background: rgba(255, 139, 171, 0.15);
+    color: var(--accent);
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid var(--accent);
+}
+
+/* ========== EXPERIENCE SECTION ==========*/
+.experience-timeline {
+    position: relative;
+    padding: var(--space-xl) 0;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-lg);
+    padding-bottom: var(--space-xl);
+    position: relative;
+}
+
+.timeline-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 60px;
+    width: 2px;
+    height: calc(100% - 60px);
+    background: linear-gradient(180deg, var(--accent), transparent);
+}
+
+.timeline-marker {
+    width: 42px;
+    height: 42px;
+    background: white;
+    border: 3px solid var(--accent);
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(255, 139, 171, 0.2);
+}
+
+.timeline-active .timeline-marker {
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+}
+
+.timeline-content {
+    background: white;
+    padding: var(--space-lg);
+    border-radius: 10px;
+    border: 2px solid var(--primary);
+    margin-top: var(--space-sm);
+    transition: all 300ms ease;
+}
+
+.timeline-content:hover {
+    border-color: var(--accent);
+    background: var(--bg-light);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(255, 139, 171, 0.2);
+}
+
+.timeline-year {
+    display: inline-block;
+    background: rgba(255, 139, 171, 0.15);
+    color: var(--accent);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+    border: 1px solid var(--accent);
+}
+
+.timeline-content h3 {
+    color: var(--text-dark);
+    margin: var(--space-sm) 0;
+}
+
+.timeline-school {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.timeline-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-top: var(--space-xs);
+}
